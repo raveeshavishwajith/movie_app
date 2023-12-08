@@ -39,7 +39,7 @@ const TicketScreen = ({navigation, route}: any) => {
     setTicketData(route.params);
   }
 
-  if (ticketData != undefined || ticketData != null) {
+  if (ticketData == undefined || ticketData == null) {
     return (
       <View style={styles.container}>
         <StatusBar hidden />
@@ -59,7 +59,7 @@ const TicketScreen = ({navigation, route}: any) => {
       <View style={styles.appHeaderContainer}>
         <AppHeader
           name="close"
-          header={'My Tickets'}
+          header={'My Ticket'}
           action={() => navigation.goBack()}
         />
       </View>
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   ticketBGImage: {
-    alignItems: 'center',
+    alignSelf: 'center',
     width: 300,
     aspectRatio: 200 / 300,
     borderTopLeftRadius: BORDERRADIUS.radius_25,

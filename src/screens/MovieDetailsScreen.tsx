@@ -79,7 +79,7 @@ const MovieDetailsScreen = ({navigation, route}: any) => {
         <View style={styles.appHeaderContainer}>
           <AppHeader
             name="close"
-            title={''}
+            title={'dsfjhsd'}
             action={() => navigation.goBack()}
           />
         </View>
@@ -108,7 +108,7 @@ const MovieDetailsScreen = ({navigation, route}: any) => {
             <View style={styles.appHeaderContainer}>
               <AppHeader
                 name="close"
-                title={''}
+                title={movieData?.original_title}
                 action={() => navigation.goBack()}
               />
             </View>
@@ -159,6 +159,7 @@ const MovieDetailsScreen = ({navigation, route}: any) => {
         </View>
         <Text style={styles.descriptionText}>{movieData?.overview}</Text>
       </View>
+
       <View>
         <CategoryHeader title="Top Cast" />
         <FlatList
@@ -178,6 +179,7 @@ const MovieDetailsScreen = ({navigation, route}: any) => {
             />
           )}
         />
+
         <View>
           <TouchableOpacity
             style={styles.buttonBG}
@@ -296,7 +298,6 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_14,
     color: COLORS.WhiteRGBA50,
     fontFamily: FONTFAMILY.poppins_light,
-    textAlign: 'justify',
   },
   containerGap24: {
     gap: SPACING.space_24,
@@ -313,7 +314,6 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_14,
     color: COLORS.White,
     fontFamily: FONTFAMILY.poppins_medium,
-    textAlign: 'center',
   },
 });
 
