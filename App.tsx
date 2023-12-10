@@ -4,8 +4,6 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import TabNavigator from './src/navigator/TabNavigator';
 import MovieDetailsScreen from './src/screens/MovieDetailsScreen';
 import SeatBookingScreen from './src/screens/SeatBookingScreen';
-import {StyleSheet} from 'react-native';
-import {COLORS, SPACING} from './src/theme/theme';
 
 const Stack = createNativeStackNavigator();
 

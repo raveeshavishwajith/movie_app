@@ -30,7 +30,7 @@ const getNowPlayingMoviesList = async () => {
     let json = await response.json();
     return json;
   } catch (error) {
-    console.error(
+    console.log(
       ' Something went wrong in getNowPlayingMoviesList Function',
       error,
     );
@@ -74,7 +74,7 @@ const HomeScreen = ({navigation}: any) => {
       let tempNowPlaying = await getNowPlayingMoviesList();
       setNowPlayingMoviesList([
         {id: 'dummy1'},
-        ...tempNowPlaying.results,
+        ...tempNowPlaying,
         {id: 'dummy2'},
       ]);
 
